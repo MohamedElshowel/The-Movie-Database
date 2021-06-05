@@ -10,7 +10,7 @@ function MovieCard(props: { movie: any; apiKey: string; index: number }) {
         <img
           className="movie-card__img"
           src={`https://www.themoviedb.org/t/p/w220_and_h330_face${props.movie.poster_path}`}
-          alt=""
+          alt={`${props.movie.title || "The movie"}'s poster`}
         />
       ) : (
         // In case the movies doesn't have a poster image, render a gray-scaled div instead.

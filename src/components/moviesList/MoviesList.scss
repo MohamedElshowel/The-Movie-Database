@@ -1,0 +1,52 @@
+.movies-section {
+  display: flex;
+  flex-direction: row;
+  margin: 2em;
+}
+
+main {
+  .movies-list {
+    padding: 0;
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    & li {
+      list-style: none;
+    }
+  }
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+
+  .movies-header {
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  & .movies-action {
+    cursor: pointer;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 0px $border-color;
+    height: 3em;
+    width: 100%;
+    margin: 5px 0;
+    background-color: $secondary-font-color;
+    &--selected {
+      color: $main-color;
+      background-color: $secondary-color;
+      font-weight: bold;
+    }
+  }
+
+  .movies-sort-actions {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+}

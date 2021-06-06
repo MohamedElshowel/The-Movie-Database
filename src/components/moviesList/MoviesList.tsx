@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import MovieCard from "../movieCard/MovieCard";
 
@@ -13,21 +14,19 @@ enum SortType {
   DESC = "desc",
 }
 
-function MoviesList() {
+function MoviesList(props: { apiKey: string }) {
   const [listType, setListType] = useState(ListType.POPULAR);
   const [sortType, setSortType] = useState(SortType.ASC);
   const [moviesData, setMoviesData] = useState<any[] | []>([]);
   const [errorMessage, setErrorMessage] = useState(null);
-  const apiKey = "4f298a53e552283bee957836a529baec";
 
   useEffect(() => {
     axios
       .get(
-        `http://api.themoviedb.org/3/discover/movie?sort_by=${listType}.${sortType}&api_key=${apiKey}`
+        `https://api.themoviedb.org/3/movie/${listType}?api_key=${props.apiKey}&language=en-US&page=1`
       )
       .then(
         (response) => {
-          console.log("response", response);
           setMoviesData(response.data.results);
         },
         (error) => setErrorMessage(error.message)
@@ -100,7 +99,13 @@ function MoviesList() {
           {moviesData?.map((movie: any, index: number) => {
             return (
               <li key={index}>
-                <MovieCard index={index} movie={movie} apiKey={apiKey} />
+                <Link to={`/movie/${movie.id}`}>
+                  <MovieCard
+                    index={index}
+                    movie={movie}
+                    apiKey={props.apiKey}
+                  />
+                </Link>
               </li>
             );
           })}

@@ -1,8 +1,7 @@
-import { CircularProgressbar } from "react-circular-progressbar";
-import "react-circular-progressbar/dist/styles.css";
+import VoteRate from "../voteRate/VoteRate";
 
 function MovieCard(props: { movie: any; apiKey: string; index: number }) {
-  let percentage = props.movie.vote_average || 0;
+  let voteAverage = props.movie.vote_average * 10 || 0;
 
   return (
     <div className="movie-card">
@@ -22,27 +21,7 @@ function MovieCard(props: { movie: any; apiKey: string; index: number }) {
 
       <div className="movie-card__data">
         <div className="movie-card__vote">
-          <CircularProgressbar
-            value={percentage}
-            text={`${percentage}%`}
-            background
-            styles={{
-              path: {
-                stroke: "#21d07a",
-              },
-              trail: {
-                stroke: "gray",
-              },
-              text: {
-                fill: "white",
-                fontSize: "26px",
-                fontWeight: "bold",
-              },
-              background: {
-                fill: "black",
-              },
-            }}
-          />
+          <VoteRate value={voteAverage} />
         </div>
 
         <div className="movie-card__title">{props.movie.title}</div>

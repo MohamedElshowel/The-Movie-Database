@@ -5,6 +5,10 @@
   height: 360px;
   margin: 10%;
   width: 90%;
+  cursor: pointer;
+  &:hover {
+    filter: saturate(2) brightness(1.05);
+  }
 
   &__data {
     margin: 0 10px;

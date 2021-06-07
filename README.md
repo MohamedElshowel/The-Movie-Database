@@ -4,6 +4,7 @@ Cloning part of ["The Movie Database"](https://www.themoviedb.org) website using
 ## Table of Contents
 * [Dependencies](#Dependencies)
 * [How To Use](#How-To-Use)
+* [File Structure](#File-Structure)
 
 ## Dependencies
 - ### Node JS
@@ -68,3 +69,13 @@ To deploy the app, you need to build it first using `npm run build`.
 
 ---------------------------------
 ## File Structure
+
+| File/Folder Name    | Description                     |
+|---------------------|---------------------------------|
+| `public/`           | contains favicon and index.html |
+| `src/`              | contains all app's resources    |
+| `src/components`    | app app's React components along with their styles (SASS files) |
+| `src/images`        | app's assets (images and SVGs). |
+| `src/style`         | app's common styles and colors. |
+| `package.json`      | app's dependencies, scripts, versions, ..etc|
+| `tsconfig.json`     | typescript configuration file for this app |

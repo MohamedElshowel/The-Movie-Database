@@ -32,7 +32,7 @@ aside {
     }
   }
 
-  & .movies-action {
+  .movies-action {
     cursor: pointer;
     border: 1px solid $border-color;
     border-radius: 5px;
@@ -52,5 +52,41 @@ aside {
     width: 100%;
     display: flex;
     flex-direction: row;
+  }
+}
+
+@media (max-width: 700px) {
+  * {
+    flex-direction: column;
+  }
+
+  .app-header {
+    & ul {
+      display: none;
+    }
+  }
+
+  .movies-section {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+
+  main {
+    .movies-list {
+      grid-template-columns: repeat(2, 50%);
+      width: 100%;
+      margin: auto;
+    }
+  }
+
+  aside {
+    width: 60%;
+    margin: 10% auto;
+  }
+
+  .movies-action {
+    line-height: 3em;
+    text-align: center;
   }
 }

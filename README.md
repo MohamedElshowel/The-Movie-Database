@@ -1,10 +1,20 @@
 # The-Movie-Database
 Cloning part of ["The Movie Database"](https://www.themoviedb.org) website using React.js with TypeScript and SASS.
 
+---------------------------------
 ## Table of Contents
+* [Implemented Features](#Implemented-Features)
 * [Dependencies](#Dependencies)
 * [How To Use](#How-To-Use)
 * [File Structure](#File-Structure)
+
+## Implemented Features
+- The home page displays the most popular movies from [The Movie Database API](https://developers.themoviedb.org/3) in ascending order.
+- Each movie card contains movie title, poster, vote average and release date.
+- The user is able to switch between three types of lists (Upcoming, Popular
+and Top-rated).
+- The user is able to change the movies order (ascending/descending).
+- The user is able to click on any movie to display more details about it containing an overview about the movie as well as the movie's cast.
 
 ## Dependencies
 - ### Node JS

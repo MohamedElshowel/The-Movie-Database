@@ -1,5 +1,5 @@
 # The-Movie-Database
-Cloning part of ["The Movie Database"](https://www.themoviedb.org) website using React.js with TypeScript and SASS.
+Cloning part of ["The Movie Database"](https://www.themoviedb.org) website using React.js, TypeScript and SASS.
 
 ---------------------------------
 ## Table of Contents
@@ -7,6 +7,7 @@ Cloning part of ["The Movie Database"](https://www.themoviedb.org) website using
 * [Dependencies](#Dependencies)
 * [How To Use](#How-To-Use)
 * [File Structure](#File-Structure)
+---------------------------------
 
 ## Implemented Features
 - The home page displays the most popular movies from [The Movie Database API](https://developers.themoviedb.org/3) in ascending order.
@@ -15,6 +16,8 @@ Cloning part of ["The Movie Database"](https://www.themoviedb.org) website using
 and Top-rated).
 - The user is able to change the movies order (ascending/descending).
 - The user is able to click on any movie to display more details about it containing an overview about the movie as well as the movie's cast.
+- The app is partially responsive to devices' screens. _Tablets' screens have not been handled yet_.
+---------------------------------
 
 ## Dependencies
 - ### Node JS
